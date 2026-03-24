@@ -23,6 +23,96 @@ Primary endpoint:
 
 See [QUICKSTART.md](./QUICKSTART.md) for local setup in under 5 minutes.
 
+## Full Install and Setup Guide
+
+### 1) Prerequisites
+
+- Node.js 20+
+- pnpm 9+
+- Git
+
+### 2) Clone the repository
+
+```bash
+git clone https://github.com/248Tech/MeasureTent.git
+cd MeasureTent
+```
+
+### 3) Install dependencies
+
+```bash
+pnpm install
+```
+
+### 4) Configure environment (optional)
+
+The API works with defaults out of the box. Optional environment variables:
+
+- `PORT` (default: `3001`)
+- `HOST` (default: `0.0.0.0`)
+- `TENT_CONFIG_DIR` (directory for tenant override JSON files)
+
+Example local override (bash):
+
+```bash
+export PORT=3001
+export HOST=0.0.0.0
+```
+
+### 5) Start backend API
+
+```bash
+pnpm dev:api
+```
+
+API endpoints:
+
+- `http://localhost:3001/health`
+- `http://localhost:3001/docs`
+- `http://localhost:3001/v1/calculate`
+
+### 6) Start frontend web app
+
+Open another terminal:
+
+```bash
+pnpm dev:web
+```
+
+Web app:
+
+- `http://localhost:5173`
+
+The web dev server proxies `/v1/*` to `http://localhost:3001`.
+
+### 7) Verify with a sample request
+
+```bash
+curl -X POST http://localhost:3001/v1/calculate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "guestCount": 120,
+    "seatingStyle": "banquet",
+    "tentType": "pole",
+    "addOns": ["stage", "bar"]
+  }'
+```
+
+Expected response fields:
+
+- `requiredSqFt`
+- `recommendedTentSize`
+- `tables`
+- `chairs`
+- `geometry`
+
+### 8) Useful workspace commands
+
+```bash
+pnpm typecheck
+pnpm build
+```
+
 ## Features
 
 - Monorepo (`pnpm` workspace)
