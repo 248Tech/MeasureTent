@@ -1,0 +1,38 @@
+{
+  "name": "measuretent",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev:api": "pnpm --filter @measurtent/api dev",
+    "dev:web": "pnpm --filter @measurtent/web dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.8.0"
+  },
+  "description": "MeasureTent is a config-driven tent sizing and event layout platform with Fastify API, TypeScript engine, and React UI.",
+  "keywords": [
+    "tent calculator",
+    "event planning",
+    "party rental",
+    "tent size calculator",
+    "fastify",
+    "typescript",
+    "react query",
+    "saas",
+    "wedding tent planner"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/248Tech/MeasureTent.git"
+  },
+  "homepage": "https://github.com/248Tech/MeasureTent",
+  "bugs": {
+    "url": "https://github.com/248Tech/MeasureTent/issues"
+  }
+}

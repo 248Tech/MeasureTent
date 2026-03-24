@@ -1,0 +1,25 @@
+{
+  "name": "@measurtent/config",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@measurtent/shared": "workspace:*"
+  },
+  "description": "Config provider layer for MeasureTent with JSON defaults and DB-ready interface."
+}

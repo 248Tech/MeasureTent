@@ -1,0 +1,32 @@
+{
+  "name": "@measurtent/api",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/server.ts"
+  },
+  "dependencies": {
+    "@fastify/sensible": "^5.6.0",
+    "@fastify/swagger": "^8.15.0",
+    "@fastify/swagger-ui": "^2.1.0",
+    "@measurtent/config": "workspace:*",
+    "@measurtent/engine": "workspace:*",
+    "@measurtent/shared": "workspace:*",
+    "fastify": "^4.28.1"
+  },
+  "description": "Fastify API for MeasureTent calculation, health checks, and docs."
+}

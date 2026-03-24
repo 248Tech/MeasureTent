@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2022"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@measurtent/shared": [
+        "packages/shared/src/index.ts"
+      ],
+      "@measurtent/shared/*": [
+        "packages/shared/src/*"
+      ],
+      "@measurtent/engine": [
+        "packages/engine/src/index.ts"
+      ],
+      "@measurtent/engine/*": [
+        "packages/engine/src/*"
+      ],
+      "@measurtent/config": [
+        "packages/config/src/index.ts"
+      ],
+      "@measurtent/config/*": [
+        "packages/config/src/*"
+      ],
+      "@measurtent/api": [
+        "packages/api/src/index.ts"
+      ],
+      "@measurtent/api/*": [
+        "packages/api/src/*"
+      ],
+      "@measurtent/sdk": [
+        "packages/sdk/src/index.ts"
+      ],
+      "@measurtent/sdk/*": [
+        "packages/sdk/src/*"
+      ],
+      "@measurtent/web": [
+        "apps/web/src/index.ts"
+      ],
+      "@measurtent/web/*": [
+        "apps/web/src/*"
+      ]
+    }
+  }
+}
