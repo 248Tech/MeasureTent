@@ -7,7 +7,8 @@
     "dev:api": "pnpm --filter @measurtent/api dev",
     "dev:web": "pnpm --filter @measurtent/web dev",
     "build": "pnpm -r build",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "package:all": "pnpm typecheck && pnpm build && pnpm -C packages/shared pack --pack-destination ../../artifacts && pnpm -C packages/config pack --pack-destination ../../artifacts && pnpm -C packages/engine pack --pack-destination ../../artifacts && pnpm -C packages/api pack --pack-destination ../../artifacts && pnpm -C packages/sdk pack --pack-destination ../../artifacts"
   },
   "devDependencies": {
     "@types/node": "^22.13.0",

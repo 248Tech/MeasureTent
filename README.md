@@ -44,6 +44,13 @@ cd MeasureTent
 pnpm install
 ```
 
+This installs all workspace dependencies, including:
+
+- Root/tooling: `typescript`, `tsx`, `@types/node`
+- API: `fastify`, `@fastify/swagger`, `@fastify/swagger-ui`, `@fastify/sensible`
+- Shared validation: `zod`
+- Web: `react`, `react-dom`, `@tanstack/react-query`, `vite`, `tailwindcss`, `postcss`, `autoprefixer`
+
 ### 4) Configure environment (optional)
 
 The API works with defaults out of the box. Optional environment variables:
@@ -112,6 +119,22 @@ Expected response fields:
 pnpm typecheck
 pnpm build
 ```
+
+### 9) One-command packaging
+
+To typecheck, build, and package all publishable workspace packages into `./artifacts`:
+
+```bash
+pnpm package:all
+```
+
+Packaged tarballs include:
+
+- `@measurtent/shared`
+- `@measurtent/config`
+- `@measurtent/engine`
+- `@measurtent/api`
+- `@measurtent/sdk`
 
 ## Features
 
