@@ -91,7 +91,7 @@
   - All foreign keys and indexes defined
   - `pnpm prisma generate` succeeds
 - **Next Agent:** Codex
-- **Status:** TODO
+- **Status:** ✅ DONE
 
 ---
 

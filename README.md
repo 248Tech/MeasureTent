@@ -46,7 +46,7 @@ pnpm install
 
 This installs all workspace dependencies, including:
 
-- Root/tooling: `typescript`, `tsx`, `@types/node`
+- Root/tooling: `typescript`, `tsx`, `@types/node`, `prisma`, `@prisma/client`
 - API: `fastify`, `@fastify/swagger`, `@fastify/swagger-ui`, `@fastify/sensible`
 - Shared validation: `zod`
 - Web: `react`, `react-dom`, `@tanstack/react-query`, `vite`, `tailwindcss`, `postcss`, `autoprefixer`
@@ -64,6 +64,12 @@ Example local override (bash):
 ```bash
 export PORT=3001
 export HOST=0.0.0.0
+```
+
+For Prisma commands, set `DATABASE_URL` (see `.env.example`) and run:
+
+```bash
+pnpm prisma:generate
 ```
 
 ### 5) Start backend API

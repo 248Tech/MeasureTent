@@ -8,10 +8,13 @@
     "dev:web": "pnpm --filter @measurtent/web dev",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
+    "prisma:generate": "prisma generate",
+    "prisma:validate": "prisma validate",
     "package:all": "pnpm typecheck && pnpm build && pnpm -C packages/shared pack --pack-destination ../../artifacts && pnpm -C packages/config pack --pack-destination ../../artifacts && pnpm -C packages/engine pack --pack-destination ../../artifacts && pnpm -C packages/api pack --pack-destination ../../artifacts && pnpm -C packages/sdk pack --pack-destination ../../artifacts"
   },
   "devDependencies": {
     "@types/node": "^22.13.0",
+    "prisma": "^6.17.1",
     "tsx": "^4.20.6",
     "typescript": "^5.8.0"
   },
@@ -35,5 +38,8 @@
   "homepage": "https://github.com/248Tech/MeasureTent",
   "bugs": {
     "url": "https://github.com/248Tech/MeasureTent/issues"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.17.1"
   }
 }
